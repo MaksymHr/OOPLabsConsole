@@ -38,6 +38,8 @@
             Mass = _mass;
         }
 
+        public abstract int NameLength();
+
         public virtual string Info()
         {
             string _mass = "";

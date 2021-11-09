@@ -24,11 +24,17 @@ namespace ConsoleLabsOOP
 
         }
 
+        public override int NameLength()
+        {
+            return this.Name.Length;
+        }
+
         public override string Info()
         {
             string str = $"Class: PRODUCT\n{base.Info()}";
             str += $"\nImplementation Period: {this.implementationPeriod} month\n";
-            str += $"End of realization: {this.End_of_Realization()}\n";
+            str += $"End of realization: {this.End_of_Realization()}\n" +
+                $"Name Length: {this.NameLength()}\n";
             return str;
         }
     }

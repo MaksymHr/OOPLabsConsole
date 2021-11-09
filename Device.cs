@@ -22,11 +22,17 @@
                 return "Cheap";
         }
 
+        public override int NameLength()
+        {
+            return this.Name.Length;
+        }
+
         public override string Info()
         {
             string str = $"Class: DEVICE\n{base.Info()}";
             str += $"\nStatus: {this.Status}\n";
-            str += $"Price info: {this.PriceCheck()}\n";
+            str += $"Price info: {this.PriceCheck()}\n" +
+                $"Name Length: {this.NameLength()}\n";
             return str;
         }
     }

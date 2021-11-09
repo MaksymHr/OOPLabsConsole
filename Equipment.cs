@@ -31,11 +31,17 @@
             else return "Good";
         }
 
+        public override int NameLength()
+        {
+            return this.Name.Length;
+        }
+
         public override string Info()
         {
             string str = $"Class: EQUIPMENT\n{base.Info()}";
             str += $"\nEquipment condition: {this.Condition}%\n";
-            str += $"Condition: {this.Condition_str()}\n";
+            str += $"Condition: {this.Condition_str()}\n" +
+                $"Name length: {this.NameLength()}\n";
             return str;
         }
     }
